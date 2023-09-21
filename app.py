@@ -18,23 +18,23 @@ DISTANCE_TYPES = {
 
 MASS_TYPES = {
     "t": 1,  # Tonne
-    "kg": math.pow(10, -3),  # Kilogram (0.001)
-    "g": math.pow(10, -6),  # Gram (0.000001)
-    "mg": math.pow(10, -9),  # Millogram (0.000000001)
+    "kg": math.pow(10, -3),  # Kilogram 
+    "g": math.pow(10, -6),  # Gram
+    "mg": math.pow(10, -9),  # Millogram
 }
 
 CAPACITY_TYPES = {
     "kL": 1,  # Kiloliter
-    "L": math.pow(10, -3),  # Liter (0.001)
-    "cL": math.pow(10, -5),  # Centiliter (0.00001)
-    "mL": math.pow(10, -6),  # Milliliter (0.000001)
+    "L": math.pow(10, -3),  # Liter
+    "cL": math.pow(10, -5),  # Centiliter
+    "mL": math.pow(10, -6),  # Milliliter 
 }
 
 VOLUME_TYPES = {
     "km3": 1,  # Cubed kilometer
     "m3": math.pow(10, -9),  # Cubed meter 
     "cm3": math.pow(10, -15),  # Cubed centimeter 
-    "mm3": math.pow(10, -18),  # Cubed millimeter (0.000000000000000001)
+    "mm3": math.pow(10, -18),  # Cubed millimeter 
 }
 
 
