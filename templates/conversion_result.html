@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Conversion Result</title>
+  {% include 'styles.html' %}
+</head>
+
+<body>
+  {% include 'navbar.html' %}
+
+  <div class="container">
+    <div class="content results">
+      <h1 class="centered">Unit Conversion Result</h1>
+      {% if invalid %}
+      <h1>You have entered an invalid or incorrect selection.</h1>
+      {% else %}
+      <p>From {{from_value}}{{from_unit}} to {{to_unit}}: {{converted}}{{to_unit}}</p>
+      <a href="{{previous}}" class="button-4">Previous Page</a>
+      {% endif %}
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    {% include 'styles.html' %}
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="container">
+        <div class="content">
+            <form action="/converter/capacity" method="post">
+                <p>From:
+                    <input type="number" name="from_value" value="50" min="0" step="any" required>
+                    <select name="from_unit" required>
+                        <!-- CAPACITY -->
+                        <option value="kL">kL</option>
+                        <option value="L">L</option>
+                        <option value="cL">cL</option>
+                        <option value="mL">mL</option>
+                    </select>
+                    <br>
+                </p>
+                <p>To: <select name="to_unit" required>
+                        <option value="kL">kL</option>
+                        <option value="L">L</option>
+                        <option value="cL">cL</option>
+                        <option value="mL">mL</option>
+                    </select><br></p>
+                <button type="submit" class="button-4">Submit</button>
+            </form><br><br>
+        </div>
+    </div>
+</body>
+
+</html>

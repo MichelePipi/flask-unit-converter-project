@@ -1,0 +1,157 @@
+h1 {
+  font-size: large;
+}
+
+a {
+  font-size: small;
+}
+
+body {
+  background-color: #e5eaf5;
+}
+
+p {
+  font-size: xx-large;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.centered {
+  text-align: center;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+.horizontal-center {
+  margin: 0 auto;
+}
+
+.navbar-title {
+  border: 5px solid #333;
+  padding-left: 10px;
+  color: gray;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Change this to center vertically */
+}
+
+.content {
+  text-align: center;
+  display: block;
+}
+
+.title-box {
+  border: 5px solid black;
+  background-color: gray;
+  margin-bottom: 10px;
+}
+
+.title-main {
+  font-family: 'Nunito', sans-serif;
+  font-size: 70px;
+  text-align: center;
+  line-height: 30vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Horizontal Navbar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  border: 5px solid #333;
+  padding: 14px 16px;
+  /* padding-bottom: 16px; */
+  padding-top: 20px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+/* CSS */
+.button-4 {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button-4:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button-4:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.button-4:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button-4:focus {
+  outline: 1px transparent;
+}
+
+.button-4:before {
+  display: none;
+}
+
+.button-4:-webkit-details-marker {
+  display: none;
+}

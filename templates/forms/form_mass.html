@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit Converter</title>
+  {% include 'styles.html' %}
+</head>
+
+<body>
+  {% include 'navbar.html' %}
+
+  <div class="container">
+    <div class="content">
+      <form action="/converter/mass" method="post">
+        <p>
+          From:
+          <input type="number" name="from_value" value="50" min="0" step="any" required />
+          <select name="from_unit" required>
+            <!-- MASS -->
+            <option value="t">t</option>
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="mg">mg</option>
+          </select>
+          <br />
+        </p>
+        <p>
+          To:
+          <select name="to_unit" required>
+            <!-- MASS -->
+            <option value="t">t</option>
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="mg">mg</option>
+          </select><br>
+        </p>
+        <button type="submit" class="button-4">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
