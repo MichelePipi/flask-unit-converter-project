@@ -6,7 +6,7 @@ app = Flask(__name__)
 ### CONSTANTS
 
 # Note all units are shown in comparison to the largest (i.e since Megameters are the largest,
-    # they are set to 1 in the dict, and Kilometers are set to the quotient of 0.001 and 1 as 1Km=0.001Mm and so forth)
+# they are set to 1 in the dict, and Kilometers are set to the quotient of 0.001 and 1 as 1Km=0.001Mm and so forth)
 
 DISTANCE_FACTORS = {
     "Mm": 1,  # Mega meter
@@ -38,7 +38,7 @@ VOLUME_FACTORS = {
 }
 
 
-def convert(factors: dict, from_unit: str, from_value: float, to_unit: str) -> str:
+def perform_conversion(factors: dict, from_unit: str, from_value: float, to_unit: str) -> str:
     """Convert given value, convert it to a different unit"""
     from_type = float(factors[from_unit])  # The measurement to convert from
     to_type = float(factors[to_unit])  # The measurement to convert to
@@ -52,17 +52,17 @@ def convert(factors: dict, from_unit: str, from_value: float, to_unit: str) -> s
 
 @app.route("/", methods=["GET"])
 def index():
-    """Loads the root page"""
+    """Loads the home page"""
     return render_template("index.html")
 
 
-@app.route("/converter/<conversion_type>", methods=["GET"])
-def load_conversion_form(conversion_type=None):
+@app.route("/converter/<conversion_type>", methods=["GET"])  # GETs from /converter/<input>
+def load_conversion_form(conversion_type=None):  
     """Loads the specified conversion form"""
     return render_template(f"forms/form_{conversion_type}.html")
 
 
-@app.route("/converter/<conversion_type>", methods=["POST"])
+@app.route("/converter/<conversion_type>", methods=["POST"])  # POSTs to /converter/<input>
 def conversion_result(conversion_type):
     """Takes form information and converts the input type into the target and returns it
     with the conversion result template"""
@@ -81,7 +81,7 @@ def conversion_result(conversion_type):
     from_value = float(request.form["from_value"])
     to_unit = request.form["to_unit"]
 
-    converted = convert(factors, from_unit, from_value, to_unit)
+    converted = perform_conversion(factors, from_unit, from_value, to_unit)
     return render_template(
         "conversion_result.html",  # Template name
         from_unit=from_unit,  # Original conversion unit
